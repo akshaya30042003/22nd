@@ -1,0 +1,120 @@
+/* Set background gradient and font families */
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Intro section */
+.intro h1 {
+    font-size: 3em;
+    color: #f64747;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.intro p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin-top: -10px;
+    color: #333;
+}
+
+/* GIF animation */
+.gif {
+    width: 150px;
+    animation: bounce 2s infinite;
+}
+
+/* Timeline images */
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.images img {
+    width: 250px;
+    height: auto; /* This ensures the aspect ratio is preserved */
+    margin: 10px;
+    border-radius: 10px;
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Special note section */
+.note {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Countdown */
+.countdown {
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #f64747;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    /* Smaller font sizes for better readability on small screens */
+    .intro h1 {
+        font-size: 2.5em;
+    }
+
+    .intro p {
+        font-size: 1.2em;
+    }
+
+    /* Smaller images for mobile */
+    .gif {
+        width: 100px;
+    }
+
+    /* Scale down timeline images */
+    .images img {
+        width: 150px;
+    }
+
+    /* Reduce padding/margins on smaller screens */
+    .note {
+        width: 90%;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
